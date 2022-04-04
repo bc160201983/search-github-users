@@ -16,46 +16,19 @@
 
 ## About The Project:-
 
-![Home page](https://github.com/Sumukha210/E-kart-website/blob/main/public/img/homepage.png?raw=true "Ekart home page")
+![Screenshot 2022-04-04 221321](https://user-images.githubusercontent.com/41289168/161599960-2d6683ae-2e4e-41e5-aefa-1c487a3f5c81.png "Search User home page")
 
-E-kart is a mern stack e-commerce website.
+Search your github profile
 
 #### The common funtionalities are:-
 
-- The user can see all the products and their ratings
-- The user can see the detailed description of the product
-- The user can add the products to cart(It stays in localstorage)
-- The user must login/signup to place order
-- The user can rate product only if he is authenticated and also he should buy products in order to give ratings
-- The user can give only one ratings for each product
-- The user can see Delivery status of the ordered products,if the product is delivered then the status will be "Delivered" otherwise "Not Delivered"
-- The admin mark the delivery status
-
-I'm using [fakestore Api](https://fakestoreapi.com/) to get product lists.
-
-##### Credit:- fakestore Api
 
 ### Built With
 
 - #### React
-- #### React Bootstrap
-- #### Redux
-- #### Redux-thunk
-- #### Node js
-- #### Express js
-- #### MongoDb
-
-### Key concepts:-
-
-- #### React hooks
-- #### Auth with JWT
-- #### MVC Pattern on Backend
-- #### Product Ratings
-- #### Cors
-- #### Redux hooks
-- #### MongoDB Atlas
-- #### bcrypt js
+- #### CSS
 - #### Axios
+- #### Context Api
 
 <!-- GETTING STARTED -->
 
