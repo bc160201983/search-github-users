@@ -11,14 +11,14 @@ const GithubProvider = ({ children }) => {
   const [githubUser, setGithubUser] = useState(mockUser);
   const [repos, setRepos] = useState(mockRepos);
   const [followers, setFollowers] = useState(mockFollowers);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("bradtraversy");
   const [requests, setRequests] = useState(0);
   //   const [repos, setRepos] = useState([]);
   //   const [followers, setFollowers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({ show: false, msg: "" });
 
-  const searchGithubUsers = async (user = "bc160201983") => {
+  const searchGithubUsers = async (user = "bradtraversy") => {
     setLoading(true);
     setError({ show: false, msg: "" });
     try {
@@ -51,10 +51,10 @@ const GithubProvider = ({ children }) => {
   useEffect(() => {
     const getUserData = async () => {
       try {
-        const res = await axios.get(`${rootUrl}/users/joshuarodriguez`);
+        const res = await axios.get(`${rootUrl}/users/${user}`);
         const { data } = await axios.get(res.data.repos_url);
         const { data: followersData } = await axios.get(
-          `${rootUrl}/users/joshuarodriguez/followers`
+          `${rootUrl}/users/${user}/followers`
         );
         setUser(res.data);
         setRepos(data);
@@ -88,6 +88,7 @@ const GithubProvider = ({ children }) => {
   }
   useEffect(() => {
     checkRequests();
+    searchGithubUsers("bradtraversy");
   }, []);
 
   return (
